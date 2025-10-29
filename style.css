@@ -68,15 +68,15 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Icônes principales - même taille */
+/* Icônes principales - PLUS GRANDES */
 .card-icon {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 12px;
 }
 
 .card-title,
 .card-title-small {
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-weight: 600;
     line-height: 1.2;
 }
@@ -186,19 +186,19 @@ body {
 
 /* DÉGRADÉS VIOLETS CLAIRS pour le sous-menu - progression du clair au foncé */
 .card-principes {
-    background: linear-gradient(135deg, #E9D5FF 0%, #D8B4FE 100%);
-}
-
-.card-comprendre {
-    background: linear-gradient(135deg, #D8B4FE 0%, #C084FC 100%);
-}
-
-.card-choisir {
     background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
 }
 
-.card-agir {
+.card-comprendre {
     background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
+}
+
+.card-choisir {
+    background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%);
+}
+
+.card-agir {
+    background: linear-gradient(135deg, #7E22CE 0%, #6B21A8 100%);
 }
 
 /* Textes en blanc pour le sous-menu */
