@@ -13,12 +13,22 @@ body {
     flex-direction: column;
 }
 
-/* En-tête - DÉGRADÉ VIOLET TRÈS MARQUÉ */
+/* En-tête - DÉGRADÉ BLEU ECTI (charte graphique exacte) */
 .hero {
-    background: linear-gradient(135deg, #A78BFA 0%, #4C1D95 100%);
+    background: linear-gradient(135deg, #009EDE 0%, #0033A0 100%);
     color: white;
     padding: 40px 20px;
     text-align: center;
+    position: relative;
+}
+
+/* Logo ECTI en haut à gauche */
+.logo-ecti {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    width: auto;
 }
 
 .hero h1 {
@@ -81,25 +91,25 @@ body {
     line-height: 1.2;
 }
 
-/* DÉGRADÉS VIOLETS TRÈS CONTRASTÉS pour les 5 boutons principaux */
+/* DÉGRADÉS BLEUS ECTI pour les 5 boutons principaux (charte exacte) */
 .card-video {
-    background: linear-gradient(135deg, #D8B4FE 0%, #7C3AED 100%);
+    background: linear-gradient(135deg, #5CBDE6 0%, #009EDE 100%);
 }
 
 .card-demo {
-    background: linear-gradient(135deg, #C084FC 0%, #6D28D9 100%);
+    background: linear-gradient(135deg, #009EDE 0%, #0066CC 100%);
 }
 
 .card-formateur {
-    background: linear-gradient(135deg, #A78BFA 0%, #5B21B6 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #0033A0 100%);
 }
 
 .card-pcs-avec {
-    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
+    background: linear-gradient(135deg, #0033A0 0%, #002470 100%);
 }
 
 .card-pcs-sans {
-    background: linear-gradient(135deg, #7C3AED 0%, #3B0764 100%);
+    background: linear-gradient(135deg, #002470 0%, #001850 100%);
 }
 
 .card-video .card-title,
@@ -117,6 +127,7 @@ body {
     font-size: 0.9em;
     opacity: 0.7;
     animation: bounce 2s infinite;
+    color: white;
 }
 
 @keyframes bounce {
@@ -189,26 +200,26 @@ body {
     color: white;
 }
 
-/* DÉGRADÉS ORANGES TRÈS CONTRASTÉS pour le sous-menu */
+/* DÉGRADÉS ORANGE/ROUGE ECTI pour le sous-menu (charte exacte) */
 .card-principes {
-    background: linear-gradient(135deg, #FED7AA 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #F47920 100%);
 }
 
 .card-comprendre {
-    background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%);
+    background: linear-gradient(135deg, #F47920 0%, #E85D1C 100%);
 }
 
 .card-choisir {
-    background: linear-gradient(135deg, #F97316 0%, #9A3412 100%);
+    background: linear-gradient(135deg, #E85D1C 0%, #DA291C 100%);
 }
 
 .card-agir {
-    background: linear-gradient(135deg, #EA580C 0%, #7C2D12 100%);
+    background: linear-gradient(135deg, #DA291C 0%, #B81F17 100%);
 }
 
-/* Footer - DÉGRADÉ VIOLET TRÈS MARQUÉ */
+/* Footer - DÉGRADÉ BLEU ECTI (charte exacte) */
 .footer {
-    background: linear-gradient(135deg, #8B5CF6 0%, #3B0764 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #001850 100%);
     color: white;
     padding: 25px 20px;
     text-align: center;
@@ -237,31 +248,45 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 1.6em;
+    .logo-ecti {
+        height: 40px;
+        top: 15px;
+        left: 15px;
     }
+    
+    .hero h1 {
+        font-size: 1.4em;
+        margin-top: 30px;
+    }
+    
     .subtitle {
         font-size: 0.9em;
     }
+    
     .container {
         grid-template-columns: 1fr;
         padding: 30px 15px;
     }
+    
     .card,
     .card-small {
         min-height: 150px;
         padding: 20px 12px;
     }
+    
     .card-icon {
         font-size: 3em;
     }
+    
     .card-icon-small {
         font-size: 2.2em;
     }
+    
     .card-title,
     .card-title-small {
         font-size: 0.95em;
     }
+    
     .submenu {
         grid-template-columns: 1fr;
     }
@@ -270,7 +295,7 @@ body {
 /* Accessibilité */
 .card:focus,
 .card-small:focus {
-    outline: 3px solid #667eea;
+    outline: 3px solid #009EDE;
     outline-offset: 3px;
 }
 
