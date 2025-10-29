@@ -44,14 +44,14 @@ body {
     flex: 1;
 }
 
-/* Cartes - MÊME TAILLE pour tout */
+/* Cartes - TAILLE FIXE qui ne change jamais */
 .card {
     background: white;
     border-radius: 16px;
     padding: 25px 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -68,21 +68,19 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* MÊME TAILLE D'ICÔNES partout - 2.5em pour tout tenir sur une ligne */
-.card-icon,
-.card-icon-small {
+/* TAILLE FIXE des icônes principales - 2.5em */
+.card-icon {
     font-size: 2.5em;
     margin-bottom: 12px;
 }
 
-.card-title,
-.card-title-small {
+.card-title {
     font-size: 0.95em;
     font-weight: 600;
     line-height: 1.3;
 }
 
-/* Couleur principale - MÊME VIOLET PARTOUT */
+/* Couleur principale - MÊME VIOLET PARTOUT pour les 5 boutons */
 .card-video,
 .card-demo,
 .card-formateur,
@@ -143,7 +141,7 @@ body {
     }
 }
 
-/* Cartes du sous-menu - MÊME STYLE */
+/* Cartes du sous-menu - MÊME TAILLE que les principales */
 .card-small {
     min-height: 160px;
     padding: 25px 15px;
@@ -165,28 +163,39 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Dégradé progressif pour le sous-menu */
-.card-principes {
-    background: linear-gradient(135deg, #B794F6 0%, #9D7EF2 100%);
+/* MÊME TAILLE d'icônes pour le sous-menu */
+.card-icon-small {
+    font-size: 2.5em;
+    margin-bottom: 12px;
 }
 
-.card-comprendre {
-    background: linear-gradient(135deg, #9D7EF2 0%, #8B5CF6 100%);
-}
-
-.card-choisir {
-    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
-}
-
-.card-agir {
-    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
-}
-
-.card-principes .card-title-small,
-.card-comprendre .card-title-small,
-.card-choisir .card-title-small,
-.card-agir .card-title-small {
+.card-title-small {
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.3;
     color: white;
+}
+
+/* COULEURS DIFFÉRENTES pour le sous-menu */
+
+/* 🟠 ORANGE pour Principes généraux */
+.card-principes {
+    background: linear-gradient(135deg, #FF9A56 0%, #FF6B35 100%);
+}
+
+/* 🔵 BLEU pour Comprendre */
+.card-comprendre {
+    background: linear-gradient(135deg, #5DADE2 0%, #3498DB 100%);
+}
+
+/* 🟡 JAUNE pour Choisir */
+.card-choisir {
+    background: linear-gradient(135deg, #F4D03F 0%, #F39C12 100%);
+}
+
+/* 🟢 VERT pour Agir */
+.card-agir {
+    background: linear-gradient(135deg, #58D68D 0%, #27AE60 100%);
 }
 
 /* Footer */
@@ -251,11 +260,7 @@ body {
     outline-offset: 3px;
 }
 
-/* État actif Formateur */
-.card-formateur.active {
-    transform: scale(0.98);
-}
-
+/* État actif Formateur - PAS DE CHANGEMENT DE TAILLE */
 .card-formateur.active .arrow-down {
     transform: rotate(180deg);
     animation: none;
