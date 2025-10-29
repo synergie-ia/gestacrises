@@ -95,11 +95,11 @@ body {
 }
 
 .card-pcs-avec {
-    background: linear-gradient(135deg, #A44CBF 0%, #8E44AD 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
 }
 
 .card-pcs-sans {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
 }
 
 .card-video .card-title,
