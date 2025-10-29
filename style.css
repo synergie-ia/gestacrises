@@ -17,38 +17,38 @@ body {
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 0.95em;
     opacity: 0.95;
     font-weight: 400;
 }
 
-/* Container - 5 colonnes sur desktop */
+/* Container - 5 colonnes FORCÉES sur une ligne */
 .container {
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 12px;
     flex: 1;
 }
 
-/* Cartes - TAILLE FIXE qui ne change jamais */
+/* Cartes - RÉDUITES pour tenir sur une ligne */
 .card {
     background: white;
-    border-radius: 16px;
-    padding: 25px 15px;
+    border-radius: 14px;
+    padding: 18px 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -59,28 +59,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 160px;
+    min-height: 130px;
     position: relative;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* TAILLE FIXE des icônes principales - 2.5em */
+/* Icônes RÉDUITES - 2em au lieu de 2.5em */
 .card-icon {
-    font-size: 2.5em;
-    margin-bottom: 12px;
+    font-size: 2em;
+    margin-bottom: 8px;
 }
 
 .card-title {
-    font-size: 0.95em;
+    font-size: 0.85em;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
-/* Couleur principale - MÊME VIOLET PARTOUT pour les 5 boutons */
+/* Couleur principale - MÊME VIOLET PARTOUT */
 .card-video,
 .card-demo,
 .card-formateur,
@@ -100,16 +100,16 @@ body {
 /* Flèche Formateur */
 .arrow-down {
     position: absolute;
-    bottom: 8px;
-    font-size: 0.9em;
+    bottom: 6px;
+    font-size: 0.8em;
     opacity: 0.7;
     animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
+    40% { transform: translateY(-6px); }
+    60% { transform: translateY(-3px); }
 }
 
 /* Sous-menu */
@@ -117,11 +117,11 @@ body {
     grid-column: 1 / -1;
     display: none;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 12px;
+    padding: 15px;
     background: #f8f9fa;
-    border-radius: 16px;
-    max-width: 1400px;
+    border-radius: 14px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -141,11 +141,11 @@ body {
     }
 }
 
-/* Cartes du sous-menu - MÊME TAILLE que les principales */
+/* Cartes du sous-menu - MÊME TAILLE */
 .card-small {
-    min-height: 160px;
-    padding: 25px 15px;
-    border-radius: 16px;
+    min-height: 130px;
+    padding: 18px 10px;
+    border-radius: 14px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
     transition: all 0.3s ease;
@@ -159,20 +159,20 @@ body {
 }
 
 .card-small:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* MÊME TAILLE d'icônes pour le sous-menu */
+/* MÊME TAILLE d'icônes */
 .card-icon-small {
-    font-size: 2.5em;
-    margin-bottom: 12px;
+    font-size: 2em;
+    margin-bottom: 8px;
 }
 
 .card-title-small {
-    font-size: 0.95em;
+    font-size: 0.85em;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.2;
     color: white;
 }
 
@@ -202,14 +202,14 @@ body {
 .footer {
     background: linear-gradient(135deg, #764ba2 0%, #5B21B6 100%);
     color: white;
-    padding: 25px 20px;
+    padding: 20px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .footer p {
     margin: 0;
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 
 /* Responsive */
@@ -230,23 +230,27 @@ body {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .subtitle {
-        font-size: 0.9em;
+        font-size: 0.85em;
     }
     .container {
         grid-template-columns: 1fr;
-        padding: 30px 15px;
+        padding: 25px 12px;
     }
     .card,
     .card-small {
-        min-height: 140px;
-        padding: 20px 12px;
+        min-height: 120px;
+        padding: 16px 10px;
     }
     .card-icon,
     .card-icon-small {
-        font-size: 2.2em;
+        font-size: 1.8em;
+    }
+    .card-title,
+    .card-title-small {
+        font-size: 0.8em;
     }
     .submenu {
         grid-template-columns: 1fr;
@@ -260,7 +264,7 @@ body {
     outline-offset: 3px;
 }
 
-/* État actif Formateur - PAS DE CHANGEMENT DE TAILLE */
+/* État actif Formateur */
 .card-formateur.active .arrow-down {
     transform: rotate(180deg);
     animation: none;
