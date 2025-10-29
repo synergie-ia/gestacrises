@@ -64,7 +64,10 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    column-gap: 40px;
+    row-gap: 50px;
     flex: 1;
+    justify-items: center;
 }
 
 /* Cartes principales */
@@ -276,7 +279,7 @@ body {
     
     .hero h1 {
         font-size: 1.4em;
-        margin-top: 50px;
+        margin-top: 65px;
         color: #0033A0;
         text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
     }
