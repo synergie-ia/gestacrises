@@ -15,11 +15,11 @@ body {
     flex-direction: column;
 }
 
-/* En-tête - OVERLAY BLEU ECTI (image pompier en fond global) */
+/* En-tête - TEXTE directement sur l'image (sans bandeau) */
 .hero {
-    background: linear-gradient(135deg, rgba(0, 158, 222, 0.90) 0%, rgba(0, 51, 160, 0.90) 100%);
+    background: transparent;
     color: white;
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px;
     text-align: center;
     position: relative;
 }
@@ -45,12 +45,14 @@ body {
     font-weight: 700;
     margin-bottom: 10px;
     margin-top: 50px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .subtitle {
     font-size: 1.15em;
     opacity: 0.95;
     font-weight: 400;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Container - 5 colonnes sur desktop */
@@ -227,13 +229,14 @@ body {
     background: linear-gradient(135deg, #DA291C 0%, #B81F17 100%);
 }
 
-/* Footer - DÉGRADÉ BLEU ECTI (charte exacte) */
+/* Footer - TEXTE sur l'image (sans bandeau) */
 .footer {
-    background: linear-gradient(135deg, #0066CC 0%, #001850 100%);
+    background: transparent;
     color: white;
     padding: 25px 20px;
     text-align: center;
     margin-top: 60px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .footer p {
