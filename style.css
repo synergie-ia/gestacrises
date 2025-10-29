@@ -44,6 +44,7 @@ body {
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 .subtitle {
@@ -152,7 +153,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
-    background: #f8f9fa;
+    background: transparent;
     border-radius: 16px;
     max-width: 1400px;
     margin: 0 auto;
