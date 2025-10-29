@@ -13,22 +13,33 @@ body {
     flex-direction: column;
 }
 
-/* En-tête - DÉGRADÉ BLEU ECTI (charte graphique exacte) */
+/* En-tête - IMAGE POMPIER avec OVERLAY BLEU ECTI */
 .hero {
-    background: linear-gradient(135deg, #009EDE 0%, #0033A0 100%);
+    background: 
+        linear-gradient(135deg, rgba(0, 158, 222, 0.85) 0%, rgba(0, 51, 160, 0.85) 100%),
+        url('hero-background.jpg') center center / cover no-repeat;
     color: white;
     padding: 40px 20px;
     text-align: center;
     position: relative;
 }
 
-/* Logo ECTI en haut à gauche */
+/* Logo ECTI en haut à gauche - ROND */
 .logo-ecti {
     position: absolute;
     top: 20px;
     left: 20px;
     height: 60px;
-    width: auto;
+    width: 60px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
 }
 
 .hero h1 {
@@ -249,9 +260,11 @@ body {
 
 @media (max-width: 768px) {
     .logo-ecti {
-        height: 40px;
+        height: 70px;
+        width: 70px;
         top: 15px;
         left: 15px;
+        padding: 8px;
     }
     
     .hero h1 {
