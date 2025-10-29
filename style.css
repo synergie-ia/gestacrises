@@ -13,9 +13,9 @@ body {
     flex-direction: column;
 }
 
-/* En-tête */
+/* En-tête - DÉGRADÉ VIOLET TRÈS MARQUÉ */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #A78BFA 0%, #4C1D95 100%);
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -81,25 +81,25 @@ body {
     line-height: 1.2;
 }
 
-/* DÉGRADÉS VIOLETS UNIQUEMENT - TRÈS DIFFÉRENTS pour les 5 boutons principaux */
+/* DÉGRADÉS VIOLETS TRÈS CONTRASTÉS pour les 5 boutons principaux */
 .card-video {
-    background: linear-gradient(135deg, #C084FC 0%, #9333EA 100%);
+    background: linear-gradient(135deg, #D8B4FE 0%, #7C3AED 100%);
 }
 
 .card-demo {
-    background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
+    background: linear-gradient(135deg, #C084FC 0%, #6D28D9 100%);
 }
 
 .card-formateur {
-    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+    background: linear-gradient(135deg, #A78BFA 0%, #5B21B6 100%);
 }
 
 .card-pcs-avec {
-    background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
 }
 
 .card-pcs-sans {
-    background: linear-gradient(135deg, #6D28D9 0%, #4C1D95 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #3B0764 100%);
 }
 
 .card-video .card-title,
@@ -189,26 +189,26 @@ body {
     color: white;
 }
 
-/* DÉGRADÉS VERTS PROGRESSIFS pour le sous-menu - assez foncés pour texte blanc */
+/* DÉGRADÉS ORANGES TRÈS CONTRASTÉS pour le sous-menu */
 .card-principes {
-    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    background: linear-gradient(135deg, #FED7AA 0%, #EA580C 100%);
 }
 
 .card-comprendre {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%);
 }
 
 .card-choisir {
-    background: linear-gradient(135deg, #047857 0%, #065F46 100%);
+    background: linear-gradient(135deg, #F97316 0%, #9A3412 100%);
 }
 
 .card-agir {
-    background: linear-gradient(135deg, #065F46 0%, #064E3B 100%);
+    background: linear-gradient(135deg, #EA580C 0%, #7C2D12 100%);
 }
 
-/* Footer */
+/* Footer - DÉGRADÉ VIOLET TRÈS MARQUÉ */
 .footer {
-    background: linear-gradient(135deg, #764ba2 0%, #5B21B6 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #3B0764 100%);
     color: white;
     padding: 25px 20px;
     text-align: center;
