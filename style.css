@@ -189,21 +189,21 @@ body {
     color: white;
 }
 
-/* DÉGRADÉS VIOLETS pour le sous-menu - Principes plus foncé */
+/* DÉGRADÉS VERTS PROGRESSIFS pour le sous-menu - assez foncés pour texte blanc */
 .card-principes {
-    background: linear-gradient(135deg, #D8B4FE 0%, #C084FC 100%);
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
 }
 
 .card-comprendre {
-    background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
 }
 
 .card-choisir {
-    background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
+    background: linear-gradient(135deg, #047857 0%, #065F46 100%);
 }
 
 .card-agir {
-    background: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);
+    background: linear-gradient(135deg, #065F46 0%, #064E3B 100%);
 }
 
 /* Footer */
