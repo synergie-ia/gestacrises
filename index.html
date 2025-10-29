@@ -1,88 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portail GESTACRISES</title>
-  <!-- ✅ Lien correct vers le CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portail de gestion de crise - Formation et outils">
+    <title>Portail de Gestion de Crise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header class="hero">
+        <h1>Portail de Gestion de Crise</h1>
+        <p class="subtitle">Outils et formation pour la gestion de crise</p>
+    </header>
 
-  <!-- ----------- HEADER ----------- -->
-  <header>
-    <h1>Portail GESTACRISES</h1>
-    <p>Un espace intégré pour comprendre, choisir et agir en situation de crise.</p>
-  </header>
-
-  <!-- ----------- VIDÉO ----------- -->
-  <section class="video">
-    <h2>Vidéo de présentation</h2>
-    <div class="video-container">
-      <!-- Remplace TON_ID_VIDEO par ton identifiant YouTube -->
-      <iframe 
-        src="https://www.youtube.com/embed/TON_ID_VIDEO" 
-        title="Présentation GESTACRISES"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p class="merci">Merci d’avoir regardé cette vidéo !</p>
-  </section>
-
-  <!-- ----------- ACCÈS RAPIDES ----------- -->
-  <section class="menu">
-    <h2>Accès rapides</h2>
-
-    <!-- Démonstrateur -->
-    <a href="https://chat.openai.com/g/gpt-gestacrises-demonstrateur" target="_blank" class="btn blue">
-      Démonstrateur virtuel
-    </a>
-
-    <!-- Formateur -->
-    <div class="submenu">
-      <button class="btn orange" onclick="toggleModules()">Formateur GESTACRISES</button>
-      <div id="modules" class="modules">
-        <a href="https://chat.openai.com/g/gpt-gestacrises-principes" target="_blank" class="btn light">
-          Module 1 — Principes généraux
+    <main class="container">
+        <!-- Carte Vidéo -->
+        <a href="#" class="card" id="card-video">
+            <div class="card-icon">📹</div>
+            <h2 class="card-title">Vidéo</h2>
         </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-comprendre" target="_blank" class="btn light">
-          Phase 1 — COMPRENDRE
+
+        <!-- Carte Démonstrateur -->
+        <a href="#" class="card" id="card-demo">
+            <div class="card-icon">🎯</div>
+            <h2 class="card-title">Démonstrateur Gest'à Crise</h2>
         </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-choisir" target="_blank" class="btn light">
-          Phase 2 — CHOISIR
+
+        <!-- Carte Formateur -->
+        <div class="card formateur-card" id="card-formateur">
+            <div class="card-icon">📚</div>
+            <h2 class="card-title">Formateur</h2>
+            <div class="arrow-down">▼</div>
+        </div>
+
+        <!-- Sous-menu Formateur (caché par défaut) -->
+        <div class="submenu" id="submenu-formateur">
+            <a href="#" class="card card-small" id="card-principes">
+                <div class="card-icon-small">📖</div>
+                <h3 class="card-title-small">Principes généraux</h3>
+            </a>
+
+            <a href="#" class="card card-small" id="card-comprendre">
+                <div class="card-icon-small">🧠</div>
+                <h3 class="card-title-small">Comprendre</h3>
+            </a>
+
+            <a href="#" class="card card-small" id="card-choisir">
+                <div class="card-icon-small">⚖️</div>
+                <h3 class="card-title-small">Choisir</h3>
+            </a>
+
+            <a href="#" class="card card-small" id="card-agir">
+                <div class="card-icon-small">⚡</div>
+                <h3 class="card-title-small">Agir</h3>
+            </a>
+        </div>
+
+        <!-- Carte PCS avec -->
+        <a href="#" class="card" id="card-pcs-avec">
+            <div class="card-icon">📋</div>
+            <h2 class="card-title">Gest'à Crise avec PCS</h2>
         </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-agir" target="_blank" class="btn light">
-          Phase 3 — AGIR
+
+        <!-- Carte PCS sans -->
+        <a href="#" class="card" id="card-pcs-sans">
+            <div class="card-icon">📄</div>
+            <h2 class="card-title">Gest'à Crise sans PCS</h2>
         </a>
-      </div>
-    </div>
+    </main>
 
-    <!-- GESTACRISES avec PCS -->
-    <a href="https://chat.openai.com/g/gpt-gestacrises-pcs" target="_blank" class="btn red">
-      GESTACRISES avec PCS
-    </a>
-
-    <!-- GESTACRISES sans PCS -->
-    <a href="https://chat.openai.com/g/gpt-gestacrises-sans-pcs" target="_blank" class="btn grey">
-      GESTACRISES sans PCS
-    </a>
-  </section>
-
-  <!-- ----------- FOOTER ----------- -->
-  <footer>
-    <p>© 2025 Synergy-IA — Tous droits réservés</p>
-    <p><a href="licence.html">Mentions légales et licence</a></p>
-  </footer>
-
-  <!-- ----------- SCRIPT ----------- -->
-  <script>
-    function toggleModules() {
-      const modules = document.getElementById('modules');
-      modules.style.display = modules.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
