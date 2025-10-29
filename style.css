@@ -64,10 +64,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    column-gap: 40px;
-    row-gap: 50px;
     flex: 1;
-    justify-items: center;
 }
 
 /* Cartes principales */
