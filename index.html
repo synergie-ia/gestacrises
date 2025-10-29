@@ -1,76 +1,184 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portail GESTACRISES</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+/* =========================================
+   Portail GESTACRISES — Style global
+   Version : 2025
+   Thème : institutionnel et sobre
+   ========================================= */
 
-<body>
-  <header>
-    <h1>Portail GESTACRISES</h1>
-    <p>Un espace intégré pour comprendre, choisir et agir en situation de crise.</p>
-  </header>
+/* ----------- STRUCTURE GÉNÉRALE ----------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f8fa; /* gris bleuté clair */
+  color: #222;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-  <!-- Vidéo de présentation -->
-  <section class="video">
-    <h2>Vidéo de présentation</h2>
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/TON_ID_VIDEO" 
-        title="Présentation GESTACRISES"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+/* ----------- EN-TÊTE ----------- */
+header {
+  padding: 40px 20px 20px 20px;
+  background-color: #ffffff;
+}
 
-  <!-- Accès principaux -->
-  <section class="menu">
-    <h2>Accès rapides</h2>
+h1 {
+  font-size: 2em;
+  color: #003b73; /* bleu institutionnel */
+  margin-bottom: 10px;
+}
 
-    <a href="https://chat.openai.com/g/gpt-gestacrises-demonstrateur" target="_blank" class="btn blue">
-      Démonstrateur virtuel
-    </a>
+h2 {
+  color: #2c2c2c;
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
 
-    <div class="submenu">
-      <button class="btn orange" onclick="toggleModules()">Formateur GESTACRISES</button>
-      <div id="modules" class="modules">
-        <a href="https://chat.openai.com/g/gpt-gestacrises-principes" target="_blank" class="btn light">
-          Module 1 — Principes généraux
-        </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-comprendre" target="_blank" class="btn light">
-          Phase 1 — COMPRENDRE
-        </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-choisir" target="_blank" class="btn light">
-          Phase 2 — CHOISIR
-        </a>
-        <a href="https://chat.openai.com/g/gpt-gestacrises-agir" target="_blank" class="btn light">
-          Phase 3 — AGIR
-        </a>
-      </div>
-    </div>
+p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-    <a href="https://chat.openai.com/g/gpt-gestacrises-pcs" target="_blank" class="btn red">
-      GESTACRISES avec PCS
-    </a>
+/* ----------- SECTION VIDÉO ----------- */
+.video {
+  margin: 40px auto;
+  max-width: 700px;
+}
 
-    <a href="https://chat.openai.com/g/gpt-gestacrises-sans-pcs" target="_blank" class="btn grey">
-      GESTACRISES sans PCS
-    </a>
-  </section>
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+}
 
-  <footer>
-    <p>© 2025 Synergy-IA — Tous droits réservés</p>
-    <p><a href="licence.html">Mentions légales et licence</a></p>
-  </footer>
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-  <script>
-    function toggleModules() {
-      const modules = document.getElementById('modules');
-      modules.style.display = modules.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-</body>
-</html>
+/* ----------- MENU PRINCIPAL ----------- */
+.menu {
+  margin: 50px auto;
+  max-width: 420px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 1.05em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.25s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ----------- COULEURS DES BOUTONS ----------- */
+.blue {
+  background-color: #5fa8d3; /* démonstrateur */
+}
+
+.orange {
+  background-color: #f4a261; /* formateur */
+}
+
+.red {
+  background-color: #e76f51; /* GESTACRISES avec PCS */
+}
+
+.grey {
+  background-color: #8d99ae; /* GESTACRISES sans PCS */
+}
+
+.light {
+  background-color: #dee2e6; /* sous-modules de formation */
+  color: #222;
+  box-shadow: none;
+  font-weight: 500;
+}
+
+/* ----------- SOUS-MENU (MODULES FORMATEUR) ----------- */
+.modules {
+  display: none;
+  margin-top: 10px;
+  background-color: #fafafa;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.submenu button {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+/* ----------- MESSAGE SOUS LA VIDÉO ----------- */
+.merci {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+/* ----------- PIED DE PAGE ----------- */
+footer {
+  margin-top: 60px;
+  padding: 20px 30px;
+  background-color: #f1f1f1;
+  color: #777;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #777;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+/* ----------- VERSION MOBILE ----------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 14px 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
