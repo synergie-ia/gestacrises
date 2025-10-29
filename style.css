@@ -28,7 +28,7 @@ body {
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.15em;
     opacity: 0.95;
     font-weight: 400;
 }
@@ -83,23 +83,23 @@ body {
 
 /* DÉGRADÉS VIOLETS UNIQUEMENT - TRÈS DIFFÉRENTS pour les 5 boutons principaux */
 .card-video {
-    background: linear-gradient(135deg, #E879F9 0%, #C026D3 100%);
-}
-
-.card-demo {
     background: linear-gradient(135deg, #C084FC 0%, #9333EA 100%);
 }
 
-.card-formateur {
+.card-demo {
     background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
 }
 
-.card-pcs-avec {
+.card-formateur {
     background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
 }
 
-.card-pcs-sans {
+.card-pcs-avec {
     background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+}
+
+.card-pcs-sans {
+    background: linear-gradient(135deg, #6D28D9 0%, #4C1D95 100%);
 }
 
 .card-video .card-title,
