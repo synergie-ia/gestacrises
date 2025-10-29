@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portail GESTACRISES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Portail GESTACRISES</h1>
+    <p>Un espace intégré pour comprendre, choisir et agir en situation de crise.</p>
+  </header>
+
+  <!-- Vidéo de présentation -->
+  <section class="video">
+    <h2>Vidéo de présentation</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/TON_ID_VIDEO" 
+        title="Présentation GESTACRISES"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Accès principaux -->
+  <section class="menu">
+    <h2>Accès rapides</h2>
+
+    <a href="https://chat.openai.com/g/gpt-gestacrises-demonstrateur" target="_blank" class="btn blue">
+      Démonstrateur virtuel
+    </a>
+
+    <div class="submenu">
+      <button class="btn orange" onclick="toggleModules()">Formateur GESTACRISES</button>
+      <div id="modules" class="modules">
+        <a href="https://chat.openai.com/g/gpt-gestacrises-principes" target="_blank" class="btn light">
+          Module 1 — Principes généraux
+        </a>
+        <a href="https://chat.openai.com/g/gpt-gestacrises-comprendre" target="_blank" class="btn light">
+          Phase 1 — COMPRENDRE
+        </a>
+        <a href="https://chat.openai.com/g/gpt-gestacrises-choisir" target="_blank" class="btn light">
+          Phase 2 — CHOISIR
+        </a>
+        <a href="https://chat.openai.com/g/gpt-gestacrises-agir" target="_blank" class="btn light">
+          Phase 3 — AGIR
+        </a>
+      </div>
+    </div>
+
+    <a href="https://chat.openai.com/g/gpt-gestacrises-pcs" target="_blank" class="btn red">
+      GESTACRISES avec PCS
+    </a>
+
+    <a href="https://chat.openai.com/g/gpt-gestacrises-sans-pcs" target="_blank" class="btn grey">
+      GESTACRISES sans PCS
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 Synergy-IA — Tous droits réservés</p>
+    <p><a href="licence.html">Mentions légales et licence</a></p>
+  </footer>
+
+  <script>
+    function toggleModules() {
+      const modules = document.getElementById('modules');
+      modules.style.display = modules.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
