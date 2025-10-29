@@ -15,11 +15,11 @@ body {
     flex-direction: column;
 }
 
-/* En-tête - TEXTE directement sur l'image (sans bandeau) */
+/* En-tête - TEXTE avec fond bleu semi-transparent sur l'image */
 .hero {
     background: transparent;
     color: white;
-    padding: 80px 20px 40px 20px;
+    padding: 20px 20px 20px 20px;
     text-align: center;
     position: relative;
 }
@@ -44,22 +44,24 @@ body {
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
-    margin-top: 50px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    color: #0033A0;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .subtitle {
     font-size: 1.15em;
     opacity: 0.95;
     font-weight: 400;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    color: #0033A0;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 /* Container - 5 colonnes sur desktop */
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -262,25 +264,33 @@ body {
 
 @media (max-width: 768px) {
     .logo-ecti {
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: auto;
         top: 15px;
         left: 15px;
-        padding: 8px;
+        padding: 5px;
+    }
+    
+    .hero {
+        padding: 15px 15px 15px 15px;
     }
     
     .hero h1 {
         font-size: 1.4em;
-        margin-top: 30px;
+        margin-top: 20px;
+        color: #0033A0;
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
     }
     
     .subtitle {
         font-size: 0.9em;
+        color: #0033A0;
+        text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
     }
     
     .container {
         grid-template-columns: 1fr;
-        padding: 30px 15px;
+        padding: 15px 15px;
     }
     
     .card,
