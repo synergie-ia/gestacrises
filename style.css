@@ -9,11 +9,13 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: #f5f7fa;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* En-tête */
+/* En-tête - Thème BLEU */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -39,6 +41,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
+    flex: 1;
 }
 
 /* Cartes */
@@ -78,13 +81,45 @@ body {
     line-height: 1.4;
 }
 
-/* Carte Formateur spéciale */
-.formateur-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Couleurs dégradées BLEUES pour chaque carte principale */
+.card-video {
+    background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+}
+
+.card-video .card-title {
     color: white;
 }
 
-.formateur-card .card-title {
+.card-demo {
+    background: linear-gradient(135deg, #42A5F5 0%, #2196F3 100%);
+}
+
+.card-demo .card-title {
+    color: white;
+}
+
+.card-formateur {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: white;
+}
+
+.card-formateur .card-title {
+    color: white;
+}
+
+.card-pcs-avec {
+    background: linear-gradient(135deg, #26C6DA 0%, #00ACC1 100%);
+}
+
+.card-pcs-avec .card-title {
+    color: white;
+}
+
+.card-pcs-sans {
+    background: linear-gradient(135deg, #26A69A 0%, #00897B 100%);
+}
+
+.card-pcs-sans .card-title {
     color: white;
 }
 
@@ -153,37 +188,65 @@ body {
     color: #2c3e50;
 }
 
-/* Couleurs spécifiques pour les cartes du sous-menu */
-#card-principes {
-    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+/* Couleurs dégradées BLEUES pour les cartes du sous-menu */
+/* Progression du BLEU CLAIR au BLEU FONCÉ */
+
+.card-principes {
+    background: linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%);
 }
 
-#card-principes .card-title-small {
+.card-principes .card-title-small {
+    color: #1565C0;
+}
+
+.card-comprendre {
+    background: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
+}
+
+.card-comprendre .card-title-small {
     color: white;
 }
 
-#card-comprendre {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+.card-choisir {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
 }
 
-#card-comprendre .card-title-small {
+.card-choisir .card-title-small {
     color: white;
 }
 
-#card-choisir {
-    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+.card-agir {
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
 }
 
-#card-choisir .card-title-small {
+.card-agir .card-title-small {
     color: white;
 }
 
-#card-agir {
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 60px;
 }
 
-#card-agir .card-title-small {
+.footer p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.footer-link {
     color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.footer-link:hover {
+    border-bottom: 2px solid white;
 }
 
 /* Responsive */
@@ -219,19 +282,24 @@ body {
         grid-template-columns: 1fr;
         padding: 15px;
     }
+
+    .footer {
+        padding: 20px 15px;
+        font-size: 0.9em;
+    }
 }
 
 /* Accessibilité */
 .card:focus {
-    outline: 3px solid #667eea;
+    outline: 3px solid #2196F3;
     outline-offset: 3px;
 }
 
 /* États actifs */
-.formateur-card.active {
+.card-formateur.active {
     transform: scale(0.98);
 }
 
-.formateur-card.active .arrow-down {
+.card-formateur.active .arrow-down {
     transform: rotate(180deg);
 }
