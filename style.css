@@ -44,7 +44,7 @@ body {
     flex: 1;
 }
 
-/* Cartes - MÊME TAILLE pour tout */
+/* Cartes principales */
 .card {
     background: white;
     border-radius: 16px;
@@ -68,27 +68,37 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* MÊME TAILLE D'ICÔNES partout - 2.5em pour tout tenir sur une ligne */
-.card-icon,
-.card-icon-small {
+/* Icônes principales - même taille */
+.card-icon {
     font-size: 2.5em;
     margin-bottom: 12px;
 }
 
-.card-title,
-.card-title-small {
+.card-title {
     font-size: 0.95em;
     font-weight: 600;
     line-height: 1.3;
 }
 
-/* Couleur principale - MÊME VIOLET PARTOUT */
-.card-video,
-.card-demo,
-.card-formateur,
-.card-pcs-avec,
-.card-pcs-sans {
+/* DÉGRADÉS VIOLETS pour les 5 boutons principaux */
+.card-video {
+    background: linear-gradient(135deg, #9D50BB 0%, #6E48AA 100%);
+}
+
+.card-demo {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-formateur {
+    background: linear-gradient(135deg, #7F53AC 0%, #647DEE 100%);
+}
+
+.card-pcs-avec {
+    background: linear-gradient(135deg, #A44CBF 0%, #8E44AD 100%);
+}
+
+.card-pcs-sans {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
 }
 
 .card-video .card-title,
@@ -143,10 +153,10 @@ body {
     }
 }
 
-/* Cartes du sous-menu - MÊME STYLE */
+/* Cartes du sous-menu - PLUS PETITES */
 .card-small {
-    min-height: 160px;
-    padding: 25px 15px;
+    min-height: 140px;
+    padding: 20px 12px;
     border-radius: 16px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
@@ -165,23 +175,37 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Dégradé progressif pour le sous-menu */
+/* Icônes sous-menu - PLUS PETITES */
+.card-icon-small {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card-title-small {
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+}
+
+/* DÉGRADÉS VIOLETS CLAIRS pour le sous-menu - progression du clair au foncé */
 .card-principes {
-    background: linear-gradient(135deg, #B794F6 0%, #9D7EF2 100%);
+    background: linear-gradient(135deg, #E9D5FF 0%, #D8B4FE 100%);
 }
 
 .card-comprendre {
-    background: linear-gradient(135deg, #9D7EF2 0%, #8B5CF6 100%);
+    background: linear-gradient(135deg, #D8B4FE 0%, #C084FC 100%);
 }
 
 .card-choisir {
-    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
 }
 
 .card-agir {
-    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+    background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
 }
 
+/* Textes en blanc pour le sous-menu */
 .card-principes .card-title-small,
 .card-comprendre .card-title-small,
 .card-choisir .card-title-small,
@@ -232,12 +256,14 @@ body {
     }
     .card,
     .card-small {
-        min-height: 140px;
-        padding: 20px 12px;
+        min-height: 130px;
+        padding: 18px 12px;
     }
-    .card-icon,
-    .card-icon-small {
+    .card-icon {
         font-size: 2.2em;
+    }
+    .card-icon-small {
+        font-size: 1.8em;
     }
     .submenu {
         grid-template-columns: 1fr;
