@@ -2,7 +2,7 @@
 const LINKS = {
     video: 'https://m.youtube.com/watch?v=ag6JMz6sivs',
     demo: 'https://chatgpt.com/g/g-68de4b559fac8191a5d02c44d8a5e2c4-demonstrateur-gestacrises',
-    principes: '', // Pas de lien fourni
+    principes: 'https://chatgpt.com/g/g-6900ea42ecd481918c904db9b1b15c74-formateur-gestacrises-c-principes-generaux',
     comprendre: 'https://chatgpt.com/g/g-68f74df88b1c8191859b07c37ba5f654-formateur-gestacrises-c-comprendre',
     choisir: 'https://chatgpt.com/g/g-6900a82e347081919b91195a2d48fe11-formateur-gestacrises-choisir',
     agir: 'https://chatgpt.com/g/g-6900b01a5ed08191ae8a00f0669bc03e-formateur-gestacrises-c-agir',
