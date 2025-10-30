@@ -1,35 +1,25 @@
-// Gestion du sous-menu Formateur
+// Gestion du menu déroulant Formateur
 document.addEventListener('DOMContentLoaded', function() {
-    const formateurCard = document.getElementById('card-formateur');
+    const formateur = document.getElementById('card-formateur');
     const submenu = document.getElementById('submenu-formateur');
     
-    if (formateurCard && submenu) {
-        formateurCard.addEventListener('click', function(e) {
+    if (formateur && submenu) {
+        formateur.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Toggle du sous-menu
+            // Toggle le sous-menu
             submenu.classList.toggle('active');
-            formateurCard.classList.toggle('active');
             
-            // Scroll smooth vers le sous-menu si on l'ouvre
-            if (submenu.classList.contains('active')) {
-                setTimeout(() => {
-                    submenu.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'nearest' 
-                    });
-                }, 100);
-            }
+            // Toggle la classe active sur la carte formateur
+            formateur.classList.toggle('active');
         });
     }
     
-    // Fermer le sous-menu si on clique en dehors
-    document.addEventListener('click', function(e) {
-        if (!formateurCard.contains(e.target) && !submenu.contains(e.target)) {
-            if (submenu.classList.contains('active')) {
-                submenu.classList.remove('active');
-                formateurCard.classList.remove('active');
-            }
-        }
+    // Empêcher la propagation des clics sur les cartes du sous-menu
+    const subCards = document.querySelectorAll('.card-small');
+    subCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
     });
 });
