@@ -8,8 +8,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: 
-        linear-gradient(rgba(245, 247, 250, 0.75), rgba(245, 247, 250, 0.75)),
-        url('hero-background.jpg') center center / cover fixed;
+        linear-gradient(rgba(245, 247, 250, 0.80), rgba(245, 247, 250, 0.80)),
+        url('hero-background.jpg') center center / cover fixed no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -47,11 +47,11 @@ body {
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-/* Sous-titre en BLEU FONCÉ ECTI avec ombre blanche - AGRANDI et EN GRAS */
+/* Sous-titre en BLEU FONCÉ ECTI avec ombre blanche */
 .subtitle {
-    font-size: 1.45em;
+    font-size: 1.15em;
     opacity: 0.95;
-    font-weight: 700;
+    font-weight: 400;
     color: #0033A0;
     text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
 }
@@ -91,9 +91,9 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Icônes principales - ENCORE PLUS GRANDES */
+/* Icônes principales - TRÈS GRANDES */
 .card-icon {
-    font-size: 4.5em;
+    font-size: 3.5em;
     margin-bottom: 15px;
 }
 
@@ -200,9 +200,9 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Icônes sous-menu - PLUS GRANDES */
+/* Icônes sous-menu */
 .card-icon-small {
-    font-size: 3.2em;
+    font-size: 2.5em;
     margin-bottom: 12px;
 }
 
@@ -265,7 +265,7 @@ body {
     body {
         background: 
             linear-gradient(rgba(245, 247, 250, 0.75), rgba(245, 247, 250, 0.75)),
-            url('hero-background.jpg') center center / cover fixed;
+            url('hero-background.jpg') center center / cover fixed no-repeat;
     }
     
     .logo-ecti {
@@ -288,8 +288,7 @@ body {
     }
     
     .subtitle {
-        font-size: 1.1em;
-        font-weight: 700;
+        font-size: 0.9em;
         color: #0033A0;
         text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
     }
@@ -306,11 +305,11 @@ body {
     }
     
     .card-icon {
-        font-size: 3.8em;
+        font-size: 3em;
     }
     
     .card-icon-small {
-        font-size: 2.8em;
+        font-size: 2.2em;
     }
     
     .card-title,
