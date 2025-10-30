@@ -1,79 +1,35 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gestacrises - L'intelligence artificielle au service de la gestion de crise">
-    <title>Gestacrises</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="hero">
-        <img src="Logo_ecti.png" alt="Logo ECTI" class="logo-ecti">
-        <h1>Bienvenue sur le portail Gestacrises</h1>
-        <p class="subtitle">L'intelligence artificielle au service de la gestion de crise</p>
-    </header>
-
-    <main class="container">
-        <!-- Carte Vidéo -->
-        <a href="#" class="card card-video" id="card-video">
-            <div class="card-icon">▶️</div>
-            <h2 class="card-title">Vidéo de présentation</h2>
-        </a>
-
-        <!-- Carte Démonstrateur -->
-        <a href="#" class="card card-demo" id="card-demo">
-            <div class="card-icon">🎯</div>
-            <h2 class="card-title">Démonstrateur virtuel</h2>
-        </a>
-
-        <!-- Carte Formateur avec sous-menu -->
-        <div class="card card-formateur" id="card-formateur">
-            <div class="card-icon">📚</div>
-            <h2 class="card-title">Formateur virtuel</h2>
-            <div class="arrow-down">▼</div>
-        </div>
-
-        <!-- Carte PCS avec -->
-        <a href="#" class="card card-pcs-avec" id="card-pcs-avec">
-            <div class="card-icon">📋</div>
-            <h2 class="card-title">Gestacrises avec PCS</h2>
-        </a>
-
-        <!-- Carte PCS sans -->
-        <a href="#" class="card card-pcs-sans" id="card-pcs-sans">
-            <div class="card-icon">📄</div>
-            <h2 class="card-title">Gestacrises sans PCS</h2>
-        </a>
-
-        <!-- Sous-menu Formateur (caché par défaut) -->
-        <div class="submenu" id="submenu-formateur">
-            <a href="#" class="card-small card-principes">
-                <div class="card-icon-small">📖</div>
-                <h3 class="card-title-small">Principes généraux</h3>
-            </a>
-
-            <a href="#" class="card-small card-comprendre">
-                <div class="card-icon-small">💡</div>
-                <h3 class="card-title-small">Comprendre</h3>
-            </a>
-
-            <a href="#" class="card-small card-choisir">
-                <div class="card-icon-small">⚖️</div>
-                <h3 class="card-title-small">Choisir</h3>
-            </a>
-
-            <a href="#" class="card-small card-agir">
-                <div class="card-icon-small">⚡</div>
-                <h3 class="card-title-small">Agir</h3>
-            </a>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>© 2025 Synergie-IA</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+// Gestion du sous-menu Formateur
+document.addEventListener('DOMContentLoaded', function() {
+    const formateurCard = document.getElementById('card-formateur');
+    const submenu = document.getElementById('submenu-formateur');
+    
+    if (formateurCard && submenu) {
+        formateurCard.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Toggle du sous-menu
+            submenu.classList.toggle('active');
+            formateurCard.classList.toggle('active');
+            
+            // Scroll smooth vers le sous-menu si on l'ouvre
+            if (submenu.classList.contains('active')) {
+                setTimeout(() => {
+                    submenu.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 100);
+            }
+        });
+    }
+    
+    // Fermer le sous-menu si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (!formateurCard.contains(e.target) && !submenu.contains(e.target)) {
+            if (submenu.classList.contains('active')) {
+                submenu.classList.remove('active');
+                formateurCard.classList.remove('active');
+            }
+        }
+    });
+});
