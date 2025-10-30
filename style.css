@@ -37,15 +37,6 @@ body {
     object-fit: contain;
 }
 
-/* Lien du logo ECTI */
-.logo-link {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    display: inline-block;
-}
-
 /* Titre en BLEU FONCÉ ECTI avec ombre blanche */
 .hero h1 {
     font-size: 2em;
